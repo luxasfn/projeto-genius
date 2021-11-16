@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    background-color: rgb(208, 255, 239);
+}
+
+.main-game {
+    height: 100vh; /*1 vh equivale a 1/100 da altura da viewport (tamanho vísivel da tela sem precisar scrollar). Ex 1vh de 900px equivale a 9px*/
+    width: 100vw; /*1 vh equivale a 1/100 da largura da viewport. Ex 1vh de 900px equivale a 9px*/
+    display: flex; /*para um contêiner, todos os itens filhos se tornam itens flexíveis organizados em uma linha.*/
+    justify-content: center; /*Nós usamos justify-content para alinhar o item no eixo principal, que neste caso é o eixo indo horizontalmente.*/
+    align-items: center; /*Para centralizar nossa caixa nós usamos a propriedade align-items para alinhar nosso item no eixo transversal, que neste caso é o eixo do bloco indo verticalmente.*/
+}
+.genius {
+    display: grid;
+    grid-template-areas: 'verde vermelho' 
+    'amarelo azul';
+    grid-gap: 10px;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 100%;
+    width: 700px;
+    height: 700px
+}
+
+.blue {
+    grid-area: azul;
+    background-color: blue;
+    border-bottom-right-radius: 100%;
+}
+.red {
+    grid-area: vermelho;
+    background-color: red;
+    border-top-right-radius: 100%;
+}
+
+.yellow {
+    grid-area: amarelo;
+    background-color: yellow;
+    border-bottom-left-radius: 100%;
+}
+
+.green {
+    grid-area: verde;
+    background-color: green;
+    border-top-left-radius: 100%;
+}
+
+.selected {
+    opacity: 0.4;
+}
